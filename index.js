@@ -11,7 +11,10 @@ for rendering output.
 'use strict';
 
 //var katex = require('katex');
-import katex from 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.mjs';
+import katex_original from 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.mjs';
+import modifier from './katex_modifier.js';
+
+let katex = modifier(katex_original);
 
 // Test if potential opening or closing delimieter
 // Assumes that there is a "$" at state.src[pos]
