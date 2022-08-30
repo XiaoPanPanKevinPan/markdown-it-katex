@@ -1,17 +1,18 @@
 # markdown-it-katex
 
-Add Math to your Markdown
+Add Math & Chemistry to your Markdown
 
-[![Build Status](https://travis-ci.org/waylonflinn/markdown-it-katex.svg?branch=master)](https://travis-ci.org/waylonflinn/markdown-it-katex)
+<!-- [![Build Status](https://travis-ci.org/waylonflinn/markdown-it-katex.svg?branch=master)](https://travis-ci.org/waylonflinn/markdown-it-katex) -->
 
 [KaTeX](https://github.com/Khan/KaTeX) is a faster alternative to MathJax. This plugin makes it easy to support in your markdown.
 
 Need convincing?
 
 * Check out the comparative benchmark: [KaTeX vs MathJax](https://jsperf.com/katex-vs-mathjax/42)
-* Try it in your browser: [markdown-it-katex demo](http://waylonflinn.github.io/markdown-it-katex/)
+* Try it in your browser: [markdown-it-katex demo](https://xiaopanpankevinpan.github.io/markdown-it-katex/)
 
 ## Usage
+<!--
 Install markdown-it
 ```
 npm install markdown-it
@@ -49,7 +50,7 @@ If you're using the default markdown-it parser, I also recommend the [github sty
 ```javascript
 md.use(mk, {"throwOnError" : false, "errorColor" : " #cc0000"});
 ```
-
+-->
 ## Examples
 
 ### Inline
