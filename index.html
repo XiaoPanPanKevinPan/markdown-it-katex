@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <head>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.css"/>
 	<style>
+	body{
+		padding: 0; margin: 0;
+	}
+	*{
+		box-sizing: border-box;
+	}	
 	#input {
 		display: block;
 		font-size: 12pt;
 		padding-top: 0.5em;
 		padding-left: 0.1em;
 		font-family: monospace;
+		width: 100%;
 	}
 	#button {
 		margin-top: 1em;
@@ -17,7 +24,15 @@
 		font-size: 14pt;
 	}
 	#output {
-		margin: 20px;
+		width: 100%;
+		padding: 45px;
+		margin: 0px;
+	}
+	@media(prefers-color-scheme: dark){
+		body, #input, #button, #output {
+			background-color: black;
+			color: white;
+		}
 	}
 	</style>
 </head>
@@ -26,7 +41,7 @@
 # Maxwell's Equations
 
 
-equation | description
+ equation | description
 ----------|------------
 $\nabla \cdot \vec{\mathbf{B}}  = 0$ | divergence of $\vec{\mathbf{B}}$ is zero
 $\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t}  = \vec{\mathbf{0}}$ |  curl of $\vec{\mathbf{E}}$ is proportional to the rate of change of $\vec{\mathbf{B}}$
@@ -35,5 +50,6 @@ $\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\p
 ![electricity](http://i.giphy.com/Gty2oDYQ1fih2.gif)</textarea>
 	<button id="button">Mathdown!</button>
 	<div id="output" class="markdown-body"></div>
-	<script src="./bundle.js"></script>
+	<!-- <script src="./bundle.js"></script> -->
+	<script src="./browser.js" type="module"></script>
 </body>

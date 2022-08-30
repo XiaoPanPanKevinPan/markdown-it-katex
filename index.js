@@ -10,7 +10,8 @@ for rendering output.
 /*jslint node: true */
 'use strict';
 
-var katex = require('katex');
+//var katex = require('katex');
+import katex from 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.mjs';
 
 // Test if potential opening or closing delimieter
 // Assumes that there is a "$" at state.src[pos]
@@ -152,7 +153,7 @@ function math_block(state, start, end, silent){
     return true;
 }
 
-module.exports = function math_plugin(md, options) {
+export default function math_plugin(md, options) {
     // Default options
 
     options = options || {};
