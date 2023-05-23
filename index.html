@@ -2,8 +2,6 @@
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<script defer src="./browser.js" type="module"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.css"/>
 	<style>
 	body{
 		padding: 0; margin: 0;
@@ -24,11 +22,6 @@
 		width: 120px;
 		height: 50px;
 		font-size: 14pt;
-	}
-	#output {
-		width: 100%;
-		padding: 45px;
-		margin: 0px;
 	}
 	@media(prefers-color-scheme: dark){
 		body, #input, #button, #output {
@@ -55,6 +48,16 @@ $\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\p
 
 ![electricity](http://i.giphy.com/Gty2oDYQ1fih2.gif)</textarea>
 	<button id="button">Mathdown!</button>
-	<div id="output" class="markdown-body"></div>
+	<div id="outputContainer"> <!-- This elem will become a shadow host, and its children will move into a shadow root. -->
+		<style>
+			@import "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css";
+			@import "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.css";
+			#output {
+				padding: 45px;
+				margin: 0px;
+			}
+		</style>
+		<div id="output" class="markdown-body"></div>
+	</div>
 	<!-- <script src="./bundle.js"></script> -->
 </body>
